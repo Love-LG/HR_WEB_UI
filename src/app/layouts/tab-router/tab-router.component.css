@@ -1,0 +1,21 @@
+nz-content {
+      height: 60px;
+        background-color: rgba(0,0,0,0.1);
+    
+}
+
+#tab-router .ant-tabs-close-x {
+    color: red;
+}
+
+:host ::ng-deep .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+    background: black;
+}
+:host ::ng-deep .ant-tabs{
+    color:white;
+}
+
+:host ::ng-deep .ant-tabs-nav .ant-tabs-tab-active {
+    background:white !important;
+    color :black !important;
+}

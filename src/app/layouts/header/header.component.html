@@ -1,0 +1,89 @@
+<header class="itmp-header">
+	<!-- <div class="header-container flex flex-row flex-items-center">
+		<div>
+			<button nz-button [nzType]="'link'" (click)="onShowSider()">
+				<i nz-icon nzType="menu" nzTheme="outline" style="color: white;font-size: 35px;"></i>
+			</button>
+		</div>
+		<div class="logo-box">
+			<img src="../../../assets/img/Images/SS_Header/emasLogo.png" alt="emasLogo" style="width: 69%">
+		</div>
+		<div class="userinfo-box flex flex-row flex-items-center user-select">
+			<div class="user-head">
+				<i class="iconfont icon-user user-head-no-login cur-p"></i>
+			</div>
+			<div class="user-info flex" style="margin-right:10px">
+				<div class="user-name text-ellipsis">User Id: {{userName}}</div>
+				<div class="user-role text-ellipsis">Role: {{roleName}}</div>
+			</div>
+			<div style="margin-left:12px">
+				<i nz-icon [nzType]="'bell'" style="font-size:18px" [nzTheme]="'twotone'"
+					[nzTwotoneColor]="'#ffffff'"></i>
+			</div>
+			<nz-dropdown nzPlacement="bottomCenter">
+				<a nz-dropdown><i class="iconfont icon-down user-head-down"></i> </a>
+				<ul nz-menu nzSelectable class="dropMenu">
+					<li nz-menu-item>
+					</li>
+				</ul>
+			</nz-dropdown>
+		</div>
+		<div class="alert-box">
+			<img src="" alt="">
+		</div>
+		<div class="tools-box flex flex-row flex-items-center">
+			<i nz-tooltip nzTitle="alarm" nzPlacement="bottom" class="iconfont icon-lingdang font-20-px cur-p"
+				style="position: relative;" (click)="showMsgBox = !showMsgBox">
+				<div class="msg-hint-icon" *ngIf="newMsg.length > 0">
+					{{newMsg.length}}
+				</div>
+			</i>
+			<i nz-tooltip nzTitle="warning" nzPlacement="bottom" class="iconfont icon-jinggao font-20-px cur-p"></i>
+			<i nz-tooltip nzTitle="radar" nzPlacement="bottom" class="iconfont icon-xinhaoche1 font-20-px cur-p"></i>
+			<i nz-tooltip nzTitle="warning" nzPlacement="bottom" class="iconfont icon-jinggao1 font-20-px cur-p"></i>
+			<i nz-tooltip nzTitle="setup" nzPlacement="bottom" class="iconfont icon-shezhi font-20-px cur-p"></i>
+			<i nz-tooltip nzTitle="map" nzPlacement="bottom" class="iconfont icon-ditu1 font-20-px cur-p"
+				(click)="openGIS()" *ngIf="!openGisLoading && gisAccess"></i>
+			<ng-template #indicatorTemplate><i nz-icon type="loading" style="font-size:20px;"></i> </ng-template>
+			<nz-spin nzSimple [nzIndicator]="indicatorTemplate" *ngIf="openGisLoading && gisAccess"> </nz-spin>
+		</div>
+		<div class="lang-box" style="margin-right:30px">
+		</div>
+
+		<div class="time-box text-ellipsis">
+			{{systemService.time.date}} {{systemService.time.time}}
+
+		</div>
+	
+		<div class="file">
+			<nz-dropdown [nzPlacement]="'bottomLeft'">
+				<button nz-button nz-dropdown style="font-weight: bold;">File</button>
+				<ul nz-menu>
+					<div style="display: flex;padding: 5px;" (click)="print()">
+						<img src="../../../assets/img/Images/SS_General/print.png" alt="" style="width: 35px;">
+						<li nz-menu-item>Print</li>
+					</div>
+					<div style="display: flex;padding: 5px;" (click)="help()">
+						<img src="../../../assets/img/Images/SS_General/help.png" alt="" style="width: 35px;">
+						<li nz-menu-item>Help</li>
+					</div>
+					<div style="display: flex;padding: 5px;" (click)="confirm()">
+						<img src="../../../assets/img/Images/SS_LoginLogout/logout.png" alt="" style="width: 35px;">
+						<li nz-menu-item>Logout</li>
+					</div>
+					<div style="padding: 5px 5px 5px 40px;" (click)="about()">
+						<li nz-menu-item>About</li>
+					</div>
+				</ul>
+			</nz-dropdown>
+		</div>
+		<div class="other-box" style="margin-left: 20px">
+			<img src="../../../assets/img/Images/SS_Header/logo.png" alt="logo">
+		</div>
+	</div> -->
+	<div class="logout">
+			<i nz-icon [nzType]="'logout'" (click)="logout()"
+			style="font-size: 28px; color: #08c;cursor: pointer;"></i>
+	</div>
+</header>
+<emas-public-modal [(visible)]="isVisible" [flag]='flag'></emas-public-modal>

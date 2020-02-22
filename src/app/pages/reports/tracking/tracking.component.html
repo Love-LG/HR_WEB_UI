@@ -1,0 +1,67 @@
+<div class="tracking" *ngIf="isShowTracking">
+  <div style="display: flex;flex-direction: row;margin-bottom: 10px;">
+      <div style="width: 60%;">
+      <p style="font-size: 24px;">Tracking List</p>
+      </div>
+      <div style="width: 40%;display: flex;flex-direction: row;">
+            <div>
+                <nz-input-group [nzPrefix]="prefixTemplateSearch">
+                    <input type="text" nz-input placeholder="Name/Mac Address" [(ngModel)]="keyWords" (ngModelChange)="onSearch($event)" [nzSize]="small" style="background: #E9E9E9;border-radius: 0%;" />
+                  </nz-input-group>
+            </div>
+            <button nz-button nzType="link">
+                <i class="iconfont icon-jinggao color-red" style="font-size: 24px;"></i>
+            </button>
+            <button nz-button nzType="link">
+                <i class="iconfont icon-xiazai color-gray" style="font-size: 24px;"></i>
+            </button>
+            <!-- <div style="margin: 0 10px;"><i nz-icon nzType="warning" nzTheme="outline"></i></div>
+            <div><i nz-icon nzType="arrow-down" nzTheme="outline"></i></div> -->
+            <ng-template #prefixTemplateSearch><i nz-icon nzType="search" nzTheme="outline"></i></ng-template>
+    </div>
+    </div>
+    <nz-table #basicTable [nzData]="listOfData" nzShowPagination="false">
+        <thead>
+          <tr style="background: #EEEEEE;">
+            <th *ngFor="let item of renderHeader" style="color: #333333;font-size: 16px;">{{item.name}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of basicTable.data">
+            <td>
+              <!-- <label nz-radio ngModel></label> -->
+              <!-- <button nz-button nzType="link">
+                  <label class="cricle"></label>
+              </button> -->
+              <button nz-button nzType="link" (click)="clickTr(data.id)">
+                <label class="cricle" [ngClass]="{'active':data.id == dataId}"></label>
+            </button>
+              {{ data.macAddress }}
+            </td>
+            <td>{{ data.userName }}</td>
+            <td>{{ data.phoneNo }}</td>
+            <td>{{ data.userEmail }}</td>
+            <td>
+                <a class="detail" (click)="showRecord(data.userName, data.macAddress, 'location')">Detail</a>
+              </td>
+            <td>
+              <a class="detail" (click)="showRecord(data.userName, data.macAddress, 'address')">Detail</a>
+            </td>
+            <td>
+              <span *ngIf="data.healthStatus === 0" style="color: green;">normal</span>
+              <span *ngIf="data.healthStatus === 1" style="color: red;">suspect</span>
+              <span *ngIf="data.healthStatus === 2">confirmed</span>
+            </td>
+          </tr>
+        </tbody>
+      </nz-table>
+      <nz-pagination [nzPageIndex]="1" [nzTotal]="pageNation.totalElements" (nzPageIndexChange)="pageIndexChange($event)" [nzItemRender]="renderItemTemplate" style="display: flex;flex-direction: row-reverse;margin-top: 10px;"></nz-pagination>
+        <ng-template #renderItemTemplate let-type let-page="page">
+          <a *ngIf="type === 'pre'"><i nz-icon nzType="arrow-left" nzTheme="outline"></i></a>
+          <a *ngIf="type === 'next'"><i nz-icon nzType="arrow-right" nzTheme="outline"></i></a>
+          <a *ngIf="type === 'page'">{{ page }}</a>
+        </ng-template>
+</div>
+<div *ngIf="isShowRecord">
+<emas-record [name]="name" [macAddress]="macAddress" [isLocationRecord]="isLocationRecord" (closeRecord)="closeRecord()"></emas-record>
+</div>

@@ -1,0 +1,57 @@
+*{
+	color: #fff
+}
+  
+.searchBar{
+	height: 40px;
+}
+.assign{
+    width: 20px;
+    height: 20px;
+}
+.cancel{
+    width: 20px;
+    height: 20px;
+}
+.transfer{
+	background: white;
+	width: 250px;
+	height: 400px;
+	margin: 5px;
+}
+.transferTitle {
+	width: 250px;
+	margin: 5px;
+}
+.middleBtn button {
+	color:#000;
+	display: block;
+	margin: 40px 50px;
+	width: 110px;
+}
+.active {
+	background: gray;
+}
+.loginTitle{
+    align-items: center;
+    display: flex;
+    height:40px;
+    font-size: 18px;
+    margin: 0 5px;
+}.cricle {
+	width: 15px;
+	height: 15px;
+	background: #D8D8D8;
+	border-radius: 50%;
+	margin-bottom: 0px;
+}
+.activebtn {
+	width: 15px;
+	height: 15px;
+	background: #223f60;
+	border-radius: 50%;
+	margin-bottom: 0px;
+}
+.user{
+	padding: 12px;
+}

@@ -1,0 +1,16 @@
+.cricle {
+	width: 15px;
+	height: 15px;
+	background: #D8D8D8;
+	border-radius: 50%;
+	margin-bottom: 0px;
+}
+
+.active {
+	background: #223F60;
+}
+
+.records {
+	display: flex;
+	flex-direction: row;
+}

@@ -1,0 +1,11 @@
+#copyright {
+    font-size: 10px;
+}
+
+#footer {
+    height: 40px;
+    position: unset;
+    bottom: 0;
+    width: 100%;
+    background: black;
+}

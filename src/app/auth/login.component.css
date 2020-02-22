@@ -1,0 +1,48 @@
+
+.login {
+	background: url('../../assets/img/bg.png');
+	height: 100%;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+
+.login_detail {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+    margin: auto;
+    width: 500px;
+    height: 400px;
+}
+
+.login_title {
+    text-align: center;
+	font-size: 36px;
+	color: rgba(255, 255, 255, 1);
+}
+
+.login_content {
+	/* width: 538px; */
+	height: 400px;
+	background: rgba(216, 216, 216, 0.4);
+	border-radius: 33px;
+	/* opacity: 0.33; */
+}
+::ng-deep .ant-form{
+    margin: auto;
+    width: 400px;
+}
+::ng-deep .ant-input-group>.ant-input:last-child{
+    border-radius: 10px;
+    height: 50px;
+}
+.login-form-button{
+    width: 96px;
+    height: 48px;
+    background: rgba(8,114,224,1);
+    border-radius: 5px;
+    border: 1px solid rgba(151,151,151,1);
+    color: white;
+}

@@ -1,0 +1,38 @@
+<div class="login">
+	<div class="login_detail">
+		<div class="login_title">MOBILITY TRACE & TRACK</div>
+		<div class="login_content">
+			<div style="text-align: center;">
+				<div style="font-size:36px;color:white;padding: 20px 0 35px 0;">Login</div>
+				<form nz-form [nzLayout]="'vertical'" [formGroup]="loginForm" id="form">
+					<nz-form-item>
+						<nz-form-control>
+							<nz-input-group>
+								<input formControlName="username" nz-input placeholder="username" />
+							</nz-input-group>
+							<nz-form-explain
+								*ngIf="loginForm.get('username')?.dirty && loginForm.get('username')?.errors">
+								Please input your username!</nz-form-explain>
+						</nz-form-control>
+					</nz-form-item>
+					<nz-form-item>
+						<nz-form-control>
+							<nz-input-group>
+								<input formControlName="password" nz-input type="password" placeholder="Password" />
+							</nz-input-group>
+							<nz-form-explain
+								*ngIf="loginForm.get('password')?.dirty && loginForm.get('password')?.errors">
+								Please input your Password!</nz-form-explain>
+						</nz-form-control>
+					</nz-form-item>
+					<nz-form-item>
+						<nz-form-control>
+							<button (click)="login()" class="login-form-button" nz-button nzType="primary"
+								>OK</button>
+						</nz-form-control>
+					</nz-form-item>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

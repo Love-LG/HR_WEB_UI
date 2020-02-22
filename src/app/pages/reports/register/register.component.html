@@ -1,0 +1,22 @@
+<!-- <div style="display: flex;flex-direction: column;"> -->
+<div style="margin: 20px 5px;">
+	<span style="font-size: 24px;font-weight: 500;color: #333333;">Accumulative Total</span>
+	<button nz-button nzType="primary" class="totalButton">{{totalRegister}}</button>
+</div>
+<div style="margin: 20px 5px;">
+	<span style="font-size: 24px;font-weight: 500;color: #333333;">Daily Increment</span>
+	<button nz-button nzType="link" nz-popover nzTrigger="click" [(nzVisible)]="visible" [nzTitle]="titleTemplate" [nzContent]="contentTemplate" nzPlacement="rightTop">
+		<i class="iconfont icon-rili color-gray" style="font-size: 24px;"></i>
+	</button>
+	<!-- <nz-range-picker [nzFormat]="dateFormat"></nz-range-picker> -->
+
+	<button nz-button nzType="link" (click)="exportDailyRegisterNoStat()">
+		<i class="iconfont icon-xiazai color-gray" style="font-size: 24px;"></i>
+  </button>
+</div>
+<div echarts [options]="chartOption" class="demo-chart"></div>
+<!-- </div> -->
+<ng-template #titleTemplate>Please choose start and end date</ng-template>
+<ng-template #contentTemplate>
+    <nz-range-picker [nzFormat]="dateFormat" ngModel (ngModelChange)="onChange($event)"></nz-range-picker>
+</ng-template>

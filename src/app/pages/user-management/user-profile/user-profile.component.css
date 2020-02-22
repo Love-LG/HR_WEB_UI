@@ -1,0 +1,15 @@
+*{
+	color: #fff
+}
+  
+.searchBar{
+	height: 40px;
+}
+.add{
+    width: 20px;
+    height: 20px;
+}
+.delete{
+    width: 20px;
+    height: 20px;
+}
