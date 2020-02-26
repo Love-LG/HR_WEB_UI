@@ -1549,7 +1549,7 @@ ui bootstrap tweaks
     background: #e6e6e6;
 }
 /* table */
-.ant-table-thead>tr>th{
+/* .ant-table-thead>tr>th{
 	color: #fff;
 	background-color: transparent;
 	border: none;	
@@ -1558,7 +1558,7 @@ ui bootstrap tweaks
 	background-color: transparent;
 	border:none;
 	color: #fff
-}
+} */
 .ant-empty-description{
 	color: #fff;
 }
@@ -1575,9 +1575,9 @@ ui bootstrap tweaks
 	background-color: transparent;
 }
 /*pagenation*/
-.ant-pagination-item-active{
+/* .ant-pagination-item-active{
 	color: #fff;
-}
+} */
 .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis, .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis{
 	color: #fff;
 }
