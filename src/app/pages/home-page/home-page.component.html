@@ -1,1 +1,84 @@
-<p>home-page works!</p>
+<div class="row totalArea">
+    <div class="totalCustomers">
+      <div class="headLine">
+        <div class="headLine_l">
+          <!-- <i class="iconfont icon-baobiaotongji" style="color: white;font-size: 0.3rem;"></i> -->
+          <div class="headLine_title">User Management</div>
+        </div>
+        <div class="headLine_l">
+          <!-- <i class="iconfont icon-baobiaotongji" style="color: white;font-size: 0.3rem;"></i> -->
+          <div class="headLine_num">123334</div>
+        </div>
+      </div>
+    <div style="margin-top: 20px;">
+        <div class="head_middle">
+            <div class="headMiddle_l"><img src="../../../../../content/images/customerNum.png" alt="" style="max-width: 130px;"></div>
+            <div class="headMiddle_data">
+                <p style="text-align: end;">28<i nz-icon nzType="caret-up" nzTheme="outline"></i></p>
+                <p>本月新增数</p>
+            </div>
+        </div>
+    </div>
+      <!-- <div class="head_bottom">
+        <div>{{'Data_Visualization.Overall.Monthly_Updates' | translate}} ({{data.TotalIncedents.monthlyUpdate}})</div>
+        <div>{{'Data_Visualization.Overall.Last_Updated' | translate}}: {{data.TotalIncedents.lastUpdated}}</div>
+      </div> -->
+    </div>
+    <div class="totalTurnover">
+      <div class="headLine">
+        <div class="headLine_l">
+          <!-- <i class="iconfont icon-baobiaotongji" style="color: white;font-size: 0.3rem;"></i> -->
+          <div class="headLine_title">成交总额</div>
+        </div>
+        <div class="headLine_l">
+            <!-- <i class="iconfont icon-baobiaotongji" style="color: white;font-size: 0.3rem;"></i> -->
+            <div class="headLine_num">77.5W</div>
+        </div>
+      </div>
+      <div style="margin-top: 20px;">
+          <div class="head_middle">
+              <div class="headMiddle_l"><div class="headMiddle_l"><img src="../../../../../content/images/dealNum.png" alt=""></div></div>
+              <div class="headMiddle_data">
+                  <p style="text-align: end;">28.06<i nz-icon nzType="caret-up" nzTheme="outline"></i></p>
+                  <p>本月成交总额</p>
+              </div>
+          </div>
+      </div>
+      <!-- <div class="head_bottom">
+        <div>{{'Data_Visualization.Overall.Monthly_Updates' | translate}} ({{data.TotalEvents.monthlyUpdate}})</div>
+        <div>{{'Data_Visualization.Overall.Last_Updated' | translate}}: {{data.TotalEvents.lastUpdated}}</div>
+      </div> -->
+    </div>
+    <div class="numberTransactions">
+      <div class="headLine">
+        <div class="headLine_l">
+          <!-- <i class="iconfont icon-baobiaotongji" style="color: white;font-size: 0.3rem;"></i> -->
+          <div class="headLine_title">成交项目数</div>
+        </div>
+        <div class="headLine_l">
+            <div class="headLine_num">6755</div>
+        </div>
+      </div>
+      <div style="margin-top: 20px;">
+          <div class="head_middle">
+              <div class="headMiddle_l"><img src="../../../../../content/images/dealNums.png" alt=""></div>
+              <div class="headMiddle_data">
+                  <p style="text-align: end;">28<i nz-icon nzType="caret-up" nzTheme="outline"></i></p>
+                  <p>本月成交项目数</p>
+              </div>
+          </div>
+      </div>
+      <!-- <div class="head_bottom">
+        <div>{{'Data_Visualization.Overall.Monthly_Updates' | translate}} ({{data.period.monthlyUpdate}})</div>
+        <div>{{'Data_Visualization.Overall.Last_Updated' | translate}}: {{data.period.lastUpdated}}</div>
+      </div> -->
+    </div>
+  </div>
+  <div nz-row>
+      <div nz-col nzSpan="10">
+        <div class="IncidentsEcharts" echarts [options]="optionAnnualStatistics"></div>
+      </div>
+      <div nz-col nzSpan="10" nzOffset="2">
+        <div class="IncidentsEcharts" echarts [options]="optionAnnualStatistics"></div>
+      </div>
+  </div>

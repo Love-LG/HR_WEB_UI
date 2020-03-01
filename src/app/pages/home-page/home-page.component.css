@@ -1,0 +1,85 @@
+.row {
+    margin: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row > div {
+    height: 1.55rem;
+    width: 25%;
+    /* background-color: white; */
+    margin: 0 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalArea > div {
+    /* border-radius: 0.1rem; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0.1rem 0.2rem 0.2rem 0.2rem;
+    color: white;
+    line-height: 1.3;
+}
+.headLine {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headLine_title {
+    font-size: 0.2rem;
+    color: rgba(130,135,141,1);
+    /* margin-left: 5px; */
+}
+.headLine_num {
+    font-size: 29px;
+    color: rgba(32,32,32,1);
+    /* margin-left: 5px; */
+}
+.headLine_l {
+    display: flex;
+    align-items: center;
+    color: rgba(130,135,141,1);
+    font-size:37px;
+}
+.headLine_r {
+    font-size: 0.18rem;
+}
+.totalCustomers {
+    background: #53cca8;
+}
+
+.totalTurnover {
+    background: #20c997;    
+}
+
+.numberTransactions {
+    background: #20c997;
+}
+
+.totalAmountPayment {
+    background: rgba(255,255,255,1);
+}
+.head_middle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headMiddle_l {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+}
+.headMiddle_data {
+    color: rgba(138,143,151,1);
+    font-size: 16px; 
+}
+.head_bottom {
+    font-size: 0.12rem;
+}
