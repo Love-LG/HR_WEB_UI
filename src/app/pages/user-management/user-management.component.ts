@@ -33,18 +33,41 @@ export class UserManagementComponent implements OnInit {
 		}
   ];
   listOfData = [];
+  addUserPageIsVisible = false;
+  editUserPageIsVisible = false;
+  dataId: number;
+  dataTr: any;
 
   constructor() { }
 
   ngOnInit() {
     for (let i = 0; i < 10; i++) {
       this.listOfData.push({
+		  id: i,
         name: '曾某某',
         sex: '男',
         phoneNum: '13981868694',
         passWorld: '123456'
       });
     }
+  }
+
+  showAddUserPage() {
+	  this.addUserPageIsVisible = true;
+  }
+
+  showEditUserPage() {
+	this.editUserPageIsVisible = true;
+}
+
+  closeModal() {
+	  this.addUserPageIsVisible = false;
+	this.editUserPageIsVisible = false;
+  }
+
+  clickTr(data, id) {
+	  this.dataId = id;
+	  this.dataTr = data;
   }
 
 }

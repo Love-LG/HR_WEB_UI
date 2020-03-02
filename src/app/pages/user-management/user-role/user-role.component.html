@@ -1,25 +1,43 @@
-<nz-modal
-      [(nzVisible)]="isVisible"
-      [nzTitle]="modalTitle"
-      [nzContent]="modalContent"
-      [nzFooter]="modalFooter"
-      (nzOnCancel)="handleCancel()"
-    >
-      <ng-template #modalTitle>
-        Custom Modal Title
-      </ng-template>
-
-      <ng-template #modalContent>
-        <p>Modal Content</p>
-        <p>Modal Content</p>
-        <p>Modal Content</p>
-        <p>Modal Content</p>
-        <p>Modal Content</p>
-      </ng-template>
-
-      <ng-template #modalFooter>
-        <span>Modal Footer: </span>
-        <button nz-button nzType="default" (click)="handleCancel()">Custom Callback</button>
-        <button nz-button nzType="primary" (click)="handleOk()" [nzLoading]="isConfirmLoading">Custom Submit</button>
-      </ng-template>
-    </nz-modal>
+<nz-modal nzWrapClassName="vertical-center-modal" nzWidth=400 nzMaskClosable="false" [nzTitle]="modalTitle"
+	[nzContent]="modalContent" [(nzVisible)]="addUserPageIsVisible" [nzFooter]="modalFooter" (nzOnCancel)="handleCancelMiddle()">
+	<ng-template #modalTitle>
+    <div class="header-title">新建用户</div>
+	</ng-template>
+	<ng-template #modalContent>
+    <div nz-row>
+        <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()" class="export">
+            <nz-form-item>
+              <div nz-row>
+                  <nz-form-label [nzSpan]="4" nzOffset="2">用户名</nz-form-label>
+                  <nz-form-control [nzSpan]="12">
+                      <!-- <nz-select nzShowSearch nzAllowClear formControlName="userName">
+                        <ng-container *ngFor="let item of exportList">
+                            <nz-option [nzLabel]="item.label" [nzValue]="item.value" *ngIf="item.isShow"></nz-option>
+                        </ng-container>
+                      </nz-select> -->
+                      <input nz-input nzAllowClear formControlName="userName">
+                  </nz-form-control>
+              </div>
+              <div nz-row>
+                  <nz-form-label [nzSpan]="4" nzOffset="2">密码</nz-form-label>
+                  <nz-form-control [nzSpan]="12">
+                      <input nz-input nzAllowClear formControlName="userName">
+                  </nz-form-control>
+              </div>
+              <div nz-row>
+                  <nz-form-label [nzSpan]="4" nzOffset="2">手机号</nz-form-label>
+                  <nz-form-control [nzSpan]="12">
+                      <input nz-input nzAllowClear formControlName="phone">
+                  </nz-form-control>
+              </div>
+            </nz-form-item >
+          </form>
+    </div>
+  </ng-template>
+  <ng-template #modalFooter>
+      <div class="footer-btn">
+        <button nz-button nzType="" (click)="handleCancelMiddle()">返回</button>
+        <button nz-button nzType="" (click)="handleOkMiddle()">确定</button>
+      </div>
+  </ng-template>
+</nz-modal>

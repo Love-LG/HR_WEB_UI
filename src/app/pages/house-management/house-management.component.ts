@@ -69,12 +69,14 @@ export class HouseManagementComponent implements OnInit {
     },
   ];
   listOfData = [];
+  dataId: number;
 
   constructor() { }
 
   ngOnInit() {
     for (let i = 0; i < 10; i++) {
       this.listOfData.push({
+		  id: i,
         name: '爱情公寓',
         location: '北京朝阳区',
         roomtype: '套二',
@@ -87,5 +89,12 @@ export class HouseManagementComponent implements OnInit {
       });
     }
   }
+
+  clickTr(id) {
+	this.dataId = id;
+}
+
+showAddHosueInfo() {
+}
 
 }

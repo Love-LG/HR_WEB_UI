@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 // import { PublicComponentModule } from '../../public/public-component.module';
 import { ShareModule } from 'src/app/share/ShareModule';
+import { AddHouseinfoComponent } from './add-houseinfo/add-houseinfo.component';
 // import { TechnicalAlarmComponent } from './technical-alarm/technical-alarm.component';
 // import { InstrusionDetectionComponent } from './instrusion-detection/instrusion-detection.component';
 // import { AlarmReportComponent } from './technical-alarm/alarm-report/alarm-report.component';
@@ -18,7 +19,8 @@ import { ShareModule } from 'src/app/share/ShareModule';
 import {NgxEchartsModule} from 'ngx-echarts';
 
 const COMPONENT = [
-    HouseManagementComponent
+    HouseManagementComponent,
+    AddHouseinfoComponent
 ];
 
 const routes: Routes = [
@@ -27,7 +29,7 @@ const routes: Routes = [
         component: HouseManagementComponent,
         children: [
             // { path: '', redirectTo: 'traffic-alert-page', pathMatch: 'full' },
-            // { path: 'technical-alarm', component: TechnicalAlarmComponent },
+            { path: 'add-houseInfo', component: AddHouseinfoComponent }
             // { path: 'instrusion-detection', component: InstrusionDetectionComponent },
             // { path: 'traffic-measure', component: TrafficMeasureComponent },
             // { path: 'technical-alert', component: TechnicalAlertComponent },

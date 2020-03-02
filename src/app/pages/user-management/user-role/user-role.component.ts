@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { addAllToArray } from '@angular/core/src/render3/util';
 // import {EventsService} from '../../events/events.service';
-import {UserService} from '../user-management.service';
+import { UserService } from '../user-management.service';
 import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
 import { threadId } from 'worker_threads';
 import { NzMessageService } from 'ng-zorro-antd';
-import {HttpClient} from '@angular/common/http'
+import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 interface ItemData {
   id: number;
@@ -22,29 +22,39 @@ interface ItemData {
   styleUrls: ['./user-role.component.css']
 })
 export class UserRoleComponent implements OnInit {
-  
-  isVisible = false;
-  isConfirmLoading = false;
+  @Input() addUserPageIsVisible: boolean;
+  @Input() exportsList: any;
+  @Output() closeModal = new EventEmitter();
 
-  constructor() {}
+  validateForm: FormGroup;
 
-  showModal(): void {
-    this.isVisible = true;
+
+  constructor(
+    private fb: FormBuilder
+  ) { }
+
+  handleCancelMiddle(): void {
+    console.log('click cancel');
+    this.addUserPageIsVisible = false;
+    this.closeModal.emit();
   }
 
-  handleOk(): void {
-    this.isConfirmLoading = true;
-    setTimeout(() => {
-      this.isVisible = false;
-      this.isConfirmLoading = false;
-    }, 3000);
+  handleOkMiddle(): void {
+    console.log('click OK');
+    this.addUserPageIsVisible = false;
+    this.closeModal.emit();
   }
 
-  handleCancel(): void {
-    this.isVisible = false;
+  initForm() {
+    this.validateForm = this.fb.group({
+      userName: [{ value: null, disabled: false }],
+      passWord: [{ value: null, disabled: false }],
+      phone: [{ value: null, disabled: false }]
+    });
   }
-  
-    ngOnInit(): void {
-    }
+
+  ngOnInit(): void {
+    this.initForm();
+  }
 
 }

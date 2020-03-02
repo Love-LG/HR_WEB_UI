@@ -50,15 +50,18 @@
     font-size: 0.18rem;
 }
 .totalCustomers {
-    background: #53cca8;
+    box-shadow: 0px 0px 25px 0px rgba(17, 47, 51, 0.2);
+    /* background: #53cca8; */
 }
 
 .totalTurnover {
-    background: #20c997;    
+    /* background: #20c997;     */
+    box-shadow: 0px 0px 25px 0px rgba(17, 47, 51, 0.2)
 }
 
 .numberTransactions {
-    background: #20c997;
+    box-shadow: 0px 0px 25px 0px rgba(17, 47, 51, 0.2)
+    /* background: #20c997; */
 }
 
 .totalAmountPayment {
